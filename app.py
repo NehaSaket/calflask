@@ -1,5 +1,5 @@
-from flask import Flask, request, render_template
-
+from flask import Flask, request, render_template,jsonify
+import json
 
 app=Flask(__name__)
 
@@ -22,7 +22,7 @@ def math_operator():
         result=number1/number2
     else:
         result=number1-number2
-    return result
+    return "The operation is {} and the result is {}". format(operation,result)
 
 
 
